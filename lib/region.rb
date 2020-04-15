@@ -44,4 +44,43 @@ class TopVacationSpots::Region
         end
     end
 
+    def destination_descriptions
+        destination_descriptions_array = []
+        self.destinations.each do |destination|
+            destination_descriptions_array << destination.description
+        end 
+        destination_descriptions_array
+    end
+
+    def destination_names
+        destination_descriptions_array = []
+        self.destinations.each do |destination|
+            destination_descriptions_array << destination.name
+        end
+        destination_descriptions_array
+    end
+
+    def get_destinations
+        destinations_array = self.scrape_destinations_array
+        self.add_destinations(destinations_array)
+    end
+
+    def scrape_destinations_array
+        html = open(self.region_url)
+        doc = Nokogiri::HTML(html)
+
+        destinations_array = []
+
+        doc.css("div#WINNERVIEWER").children.each do |destination|
+            name = destination.search("div.mainName a").text
+            description = destination.search("div.descr_lb").text
+
+            if name != "" && description !=""
+                destinations_array << {
+                    :name => name,
+                    :description => description}
+            end
+        end
+        destinations_array
+    end
 end
