@@ -1,7 +1,9 @@
 class TopVacationSpots::Scraper
 
-    def get_page
-        Nokogiri::HTML(open("https://travel.usnews.com/rankings/best-usa-vacations/"))
+    VACA_URL = "https://www.tripadvisor.com/TravelersChoice-Destinations"
+
+    def self.get_page
+        res = HTTParty.get(VACA_URL)
     end
 
     def scrape_dest_index

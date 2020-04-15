@@ -1,5 +1,5 @@
 require_relative "./top_vacation_spots/version"
-require "httparty"
+require 'httparty'
 require "pry"
 require_relative "./top_vacation_spots/cli"
 require_relative "./top_vacation_spots/scraper"

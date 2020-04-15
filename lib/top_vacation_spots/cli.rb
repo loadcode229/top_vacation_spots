@@ -1,30 +1,37 @@
-class CLI
+class TopVacationSpots::CLI
 
     def call
+        welcome_screen
+        make_regions_and_destinations
+        list_regions
         puts "hello world"
     end
 
-    def destination_link(destination)
+    def goodbye
+        puts "goodbyee!"
+    end
+
+    def list_destinations(region_index)
 
     end
 
-    def destination_more_info(input)
+    def list_regions
 
     end
 
-    def exit_or_menu(new_answer)
+    def make_regions_and_destinations
 
     end
 
-    def intro
+    def select_destination
 
     end
 
-    def main_menu
+    def select_region
 
     end
 
-    def main_menu_select
+    def welcome_screen
 
     end
 end
