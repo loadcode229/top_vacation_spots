@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["loadcode229"]
   spec.email         = ["sepone229@gmail.com"]
 
-  spec.summary       = %q{Top Vacation Spots in the US}
+  spec.summary       = %q{Top Vacation Spots in the world.}
   spec.description   = %q{Write a longer description or delete this line.}
   spec.homepage      = "http://rubygems.org/gems/top-travel-destination-cli-gem"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")

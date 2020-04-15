@@ -1,12 +1,13 @@
 class TopVacationSpots::Scraper
 
-    VACA_URL = "https://www.tripadvisor.com/TravelersChoice-Destinations"
-
+    BASE_URL = "http://www.tripadvisor.com/TravelersChoice-Destinations-cPopular-g1"
     def self.get_page
-        res = HTTParty.get(VACA_URL)
+        url = BASE_URL
+        res = HTTParty.get(url)
     end
 
     def scrape_dest_index
+        
     end
 
     def make_destination
